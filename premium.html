@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/main.css" />
+		<link rel="stylesheet" href="./css/fonts.css" />
+		<link rel="stylesheet" href="./css/animation.css">
+		<link rel="stylesheet" href="./css/responsive.css">
+		<title>Spotify</title>
+		<link rel="icon" href="https://www.scdn.co/i/_global/favicon.png" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
+			rel="stylesheet"
+        />
+	</head>
+	<body>
+		<!--Header-->
+		<custom-header></custom-header>
+		<!--Header-->
+
+        <div class="premium-head">
+            <div class="container">
+                <h1>Chuyển sang trả phí. Hãy hạnh phúc.</h1>
+                <h2 class="title-2">Âm thanh của Premium thật đáng kinh ngạc. Thưởng thức âm nhạc không có quảng cáo trên tất cả các thiết bị của bạn. *</h2>
+                <a class="black_btn" href="#plans">XEM KẾ HOẠCH</a>
+                <p><small><a href="">*Các điều khoản và điều kiện</a></small></p>
+            </div>
+        </div>
+
+        <div class="why-premium">
+            <div class="container">
+                <h2 class="title-1">Tại sao bạn nên nâng cấp lên Premium?</h2>
+            </div>
+            <div class="container why-cards">
+                <why-card image="./assets/benefit_1.png"
+                          title="Tải nhạc."
+                          text="Nghe bất cứ nơi nào bạn muốn.">
+                </why-card>
+                <why-card image="./assets/benefit_2.png"
+                          title="Không có gián đoạn quảng cáo."
+                          text="Thưởng thức âm nhạc không ngừng.">
+                </why-card>
+                <why-card image="./assets/benefit_3.png"
+                          title="Chơi bất kỳ bài hát nào bạn muốn."
+                          text="Ngay cả trên điện thoại di động.">
+                </why-card>
+                <why-card image="./assets/benefit_4.png"
+                          title="Bài hát bỏ qua không giới hạn."
+                          text="Chỉ cần nhấn vào nút tiếp theo.">
+                </why-card>
+            </div>
+        </div>
+        
+        <div id="plans" class="premium-plans">
+            <div class="container plans-text">
+                <h2>Chọn phí Premium của bạn</h2>
+                <p>Nghe không giới hạn trên điện thoại, loa và các thiết bị khác.</p>
+            </div>
+            <div class="container plans-container">
+                <pay-plan prepay="Thanh toán một lần"
+                          name="Mini"
+                          price="Từ 2,300₫/ngày"
+                          account="1 tài khoản"
+                          list-1="Nghe nhạc không quảng cáo trên thiết bị di động"
+                          list-2="Nhóm nghe chung"
+                          list-3="Tải 30 bài hát xuống 1 thiết bị di động"
+                          list-4=""
+                          btntext="BẮT ĐẦU"
+                          smalltesxt="Áp dụng điều khoản và điều kiện."
+                          active="false">
+                </pay-plan>
+                <pay-plan 
+                          prepay="Thanh toán một lần"
+                          name="Individual"
+                          price="59,000₫/tháng sau thời gian ưu đãi"
+                          account="1 tài khoản"
+                          list-1="Nghe nhạc không quảng cáo"
+                          list-2="Nghe mọi nơi - ngay cả khi không có kết nối mạng"
+                          list-3="Nghe lại tùy ý"
+                          list-4=""
+                          btntext="BẮt ĐẦU"
+                          smalltesxt="Áp dụng Điều khoản và điều kiện. Một tháng dùng miễn phí không dành cho người đã dùng thử gói Premium."
+                          active="false">
+                </pay-plan>
+                <pay-plan prepay="Thanh toán một lần"
+                          name="Student"
+                          price="29,500₫/tháng sau thời gian ưu đãi"
+                          account="1 tài khoản"
+                          list-1="Giảm giá đặc biệt cho sinh viên đủ điều kiện"
+                          list-2="Nghe nhạc không quảng cáo"
+                          list-3="Nghe mọi nơi - ngay cả khi không có kết nối mạng"
+                          list-4="Nghe theo cách của bạn"
+                          list-5=""
+                          btntext="BẮt ĐẦU"
+                          smalltesxt="Áp dụng các điều khoản và điều kiện. Gói chỉ dành cho sinh viên tại các trường cao đẳng và đại học chưa dùng thử gói Premium. Sau thời gian dùng thử, mức phí sẽ là 29,500₫/tháng."
+                          active="false">
+                </pay-plan>
+
+            </div>
+        </div>
+
+
+		<!--Footer-->
+		<custom-footer></custom-footer>
+		<!--Footer-->
+
+		<div id="opacity" class="opacity"></div>
+		<script src="./component/header.js"></script>
+        <script src="./component/footer.js"></script>
+        <script src="./component/whyCard.js"></script>
+        <script src="./component/payPlan.js"></script>
+        <script src="./js/main.js"></script>
+        <script>
+            //change header background color
+            window.onscroll = function() {scrollFunction()};
+            document.querySelector("header").style.backgroundColor = "transparent";
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.querySelector("header").style.backgroundColor = "rgba(0, 0, 0, 0.6)";
+                }else {
+                    document.querySelector("header").style.backgroundColor = "transparent";
+                }
+            }
+        </script>
+	</body>
+</html>
